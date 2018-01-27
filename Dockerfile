@@ -1,4 +1,15 @@
-FROM openjdk:8-alpine
+FROM debian:jessie-slim
+
+
+# Oracle Java. Accept no substitutes.
+ADD webupd8team-java.list /etc/apt/sources.list.d/webupd8team-java.list
+RUN echo debconf shared/accepted-oracle-license-v1-1 select true |  debconf-set-selections && \
+    apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys EEA14886 && \
+    apt-get update && \
+    mkdir /usr/share/man/man1 && \
+    apt-get install -y --no-install-recommends python-minimal debconf-utils apt-utils oracle-java8-installer && \
+    apt-get clean
+
 
 # Setup useful environment variables
 ENV CONF_HOME     /var/atlassian/confluence
