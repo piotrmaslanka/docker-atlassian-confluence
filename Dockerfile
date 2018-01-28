@@ -1,4 +1,4 @@
-FROM oracle/jdk:8
+FROM dockerfile/java:oracle-java7
 
 
 # Setup useful environment variables
