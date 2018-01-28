@@ -1,4 +1,4 @@
-FROM dockerfile/java:oracle-java7
+FROM anapsix/alpine-java:8
 
 
 # Setup useful environment variables
