@@ -1,4 +1,4 @@
-FROM oracle/JDK:8
+FROM oracle/jdk:8
 
 
 # Setup useful environment variables
