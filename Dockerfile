@@ -1,5 +1,8 @@
 FROM anapsix/alpine-java:8
 
+ENV JRE_VERSION 1.8
+ENV JDK_VERSION 1.8
+ENV JAVA_VERSION 1.8
 
 # Setup useful environment variables
 ENV CONF_HOME     /var/atlassian/confluence
